@@ -19,7 +19,16 @@ const app = express();
 const server = http.createServer(app);
 
 // Middleware
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      connectSrc: ["'self'", "ws:", "wss:"],
+    },
+  },
+}));
 app.use(compression());
 app.use(cors());
 app.use(express.json());
