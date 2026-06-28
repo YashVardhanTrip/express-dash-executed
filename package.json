@@ -1,0 +1,46 @@
+{
+  "name": "express-dash",
+  "version": "2.4.1",
+  "description": "Lightweight system metrics dashboard with real-time monitoring",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest --coverage",
+    "test:unit": "jest test/unit",
+    "test:integration": "jest test/integration",
+    "lint": "eslint src/ lib/",
+    "build": "node scripts/build.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.56.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YashVardhanTrip/express-dash.git"
+  },
+  "keywords": [
+    "dashboard",
+    "metrics",
+    "monitoring",
+    "express"
+  ],
+  "author": "YashVardhanTrip",
+  "license": "MIT"
+}
